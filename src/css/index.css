@@ -1,0 +1,56 @@
+@import url('https://fonts.cdnfonts.com/css/pricedown');
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+:root {
+  --theme-blue: #00d2ff;
+  --theme-red: #ff0000;
+  --theme-magenta: #ff0099;
+  --theme-gradient: linear-gradient(90deg, var(--theme-blue) 0%, var(--theme-red) 50%, var(--theme-magenta) 100%);
+  --theme-shine: linear-gradient(90deg, var(--theme-blue) 0%, #ffffff 50%, var(--theme-magenta) 100%);
+  
+  --primary: var(--theme-blue);
+  --secondary: var(--theme-magenta);
+  --accent: var(--theme-red);
+  
+  --gold: var(--theme-blue);
+  --gold-bright: #34e0ff;
+  --gold-dim: rgba(0, 210, 255, 0.3);
+  --teal: var(--theme-magenta);
+  --rose: var(--theme-red);
+  
+  --black: #080808;
+  --obsidian: #0c0c0c;
+  --charcoal: #121212;
+  --dim: #1a1a1a;
+  --ash: #888888;
+  --muted: #555555;
+  --white: #ffffff;
+  --light: #eeeeee;
+  --red: #ff0000;
+  --font-display: 'Metal Mania', 'UnifrakturMaguntia', 'Pricedown', 'Niara', 'Cursive', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(0, 210, 255, 0.12), transparent 35rem),
+    radial-gradient(circle at 88% 8%, rgba(255, 0, 153, 0.12), transparent 30rem),
+    linear-gradient(180deg, #050505 0%, var(--black) 38%, #020202 100%);
+  color: var(--white);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}

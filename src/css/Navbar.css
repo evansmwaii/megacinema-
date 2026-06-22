@@ -1,0 +1,157 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background:
+    linear-gradient(180deg, rgba(5,5,5,0.98) 0%, rgba(5,5,5,0.85) 100%),
+    linear-gradient(90deg, rgba(0,210,255,0.05), rgba(255,0,0,0.03), rgba(255,0,153,0.05));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 210, 255, 0.1);
+  padding: 0 3rem;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-search {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  background: rgba(18, 18, 18, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  height: 40px;
+}
+
+.navbar-search .search-input {
+  flex: 1;
+  padding: 0 1rem;
+  background: transparent;
+  border: none;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.navbar-search .search-button {
+  padding: 0 1.25rem;
+  height: 100%;
+  background: #ff0000;
+  color: var(--white);
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.navbar-search .search-button:hover {
+  filter: brightness(1.1);
+}
+
+.navbar-brand a {
+  font-family: 'Metal Mania', cursive;
+  font-size: 3.5rem;
+  letter-spacing: 0.05em;
+  background: var(--theme-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  text-decoration: none;
+  
+  /* Static Glow */
+  filter: drop-shadow(0 0 10px rgba(0, 210, 255, 0.4));
+  transition: transform 0.3s ease;
+}
+
+/* Passing Shine Effect */
+.navbar-brand a::after {
+  content: 'MEGACINEMA';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.9) 50%,
+    transparent 60%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shine-pass 5s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes shine-pass {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.navbar-brand a:hover {
+  transform: scale(1.02);
+}
+
+.navbar-brand a:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 20px rgba(0, 210, 255, 0.6));
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--white);
+  padding: 0.4rem 0;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--theme-gradient);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--theme-blue);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 1.25rem;
+  }
+  .navbar-brand a {
+    font-size: 2rem;
+  }
+}

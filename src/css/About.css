@@ -1,0 +1,53 @@
+.about {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #090909 0%, #070707 100%);
+}
+
+.about-hero {
+  position: relative;
+  display: flex;
+  min-height: calc(100vh - 64px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 2rem 1.25rem;
+  text-align: center;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(0, 210, 255, 0.08), transparent 22rem),
+    radial-gradient(circle at 50% 70%, rgba(255, 0, 153, 0.05), transparent 18rem);
+}
+
+.about-label {
+  color: var(--gold);
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.about-credit {
+  color: var(--white);
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+}
+
+.about-engineer {
+  color: var(--light);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+}
+
+.about-phone {
+  color: var(--muted);
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+}

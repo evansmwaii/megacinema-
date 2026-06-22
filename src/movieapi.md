@@ -1,0 +1,12 @@
+- vidsrc.pro
+- vidsrc.to
+- vidsrc.cc
+- vidsrc.me (more at vidsrc.domains)
+- 2embed.cc
+- 2embed.stream
+- 2embed.org 
+- superembed.stream
+- moviesapi.club
+- blackvid.space
+- autoembed.co
+- 123embed.net
