@@ -313,8 +313,16 @@
   .slide-overview {
     font-size: 0.95rem;
   }
+  .hero-actions {
+    flex-wrap: wrap;
+  }
+  .hero-btn {
+    padding: 0.7rem 1.4rem;
+    font-size: 0.8rem;
+  }
   .search-overlay {
     left: 1.25rem;
+    right: 1.25rem;
     top: 1rem;
   }
   .movies-grid {
@@ -322,6 +330,25 @@
     padding: 0 1.25rem 3rem;
   }
   .error-message { margin: 1.5rem 1.25rem; }
+}
+
+/* ── Small phones: give the two hero buttons their own row each ── */
+@media (max-width: 420px) {
+  .slide-title {
+    font-size: 1.8rem;
+  }
+  .slide-overview {
+    font-size: 0.85rem;
+    -webkit-line-clamp: 2;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* ── Tabs ── */
